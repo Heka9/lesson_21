@@ -7144,7 +7144,7 @@
                 slidesPerView: 1,
                 spaceBetween: 0,
                 autoHeight: true,
-                speed: 800,
+                speed: 0,
                 effect: "fade",
                 pagination: {
                     el: ".testimonials__dotts",
