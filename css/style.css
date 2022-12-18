@@ -3180,10 +3180,6 @@ body::after {
     margin-top: 2.5rem;
   }
 
-  .testimonials__slider {
-    margin-left: 1.875rem;
-  }
-
   .testimonials__slide.swiper-slide-next {
     opacity: 0 !important;
   }
@@ -3197,8 +3193,20 @@ body::after {
     max-width: none;
   }
 
+  .slide-testimonials__avatar-ibg {
+    -webkit-transform: translate(-30%, -50%);
+        -ms-transform: translate(-30%, -50%);
+            transform: translate(-30%, -50%);
+  }
+
   .subscribe__box::before {
     display: none;
+  }
+}
+
+@media (max-width: 40.625em) and (max-width: 20em) {
+  .testimonials__slider {
+    margin-left: 0.9375rem;
   }
 }
 
@@ -4238,6 +4246,28 @@ body::after {
     .testimonials__content {
       padding-right: calc(
 				3.125rem + 3.125 * (100vw - 53.125rem) / 19
+			);
+    }
+}
+}
+
+@media (max-width: 40.625em) and (min-width: 40.625em) {
+  .testimonials__slider {
+    margin-left: 1.875rem;
+  }
+}
+
+@media (max-width: 40.625em) and (min-width: 20em) and (max-width: 40.625em) {
+@supports (margin-left: clamp( 0.9375rem , 0.0284090909rem  +  4.5454545455vw , 1.875rem )) {
+    .testimonials__slider {
+      margin-left: clamp( 0.9375rem , 0.0284090909rem  +  4.5454545455vw , 1.875rem );
+    }
+}
+
+@supports not (margin-left: clamp( 0.9375rem , 0.0284090909rem  +  4.5454545455vw , 1.875rem )) {
+    .testimonials__slider {
+      margin-left: calc(
+				0.9375rem + 0.9375 * (100vw - 20rem) / 20.625
 			);
     }
 }
